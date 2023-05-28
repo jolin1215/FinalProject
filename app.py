@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # 讀取Excel檔案
 data = pd.read_excel('活頁簿2.xlsx')
