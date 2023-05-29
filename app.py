@@ -1,7 +1,9 @@
+pip install matplotlib
+pip install pandas
+pip install --upgrade matplotlib
+
 import pandas as pd
 import matplotlib.pyplot as plt
-
-pip install matplotlib
 
 # 讀取Excel檔案
 data = pd.read_excel('活頁簿2.xlsx')
