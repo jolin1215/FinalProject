@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pl
 
 # 讀取Excel檔案
 data = pd.read_excel('https://raw.githubusercontent.com/jolin1215/FinalProject/main/活頁簿2.xlsx')
@@ -26,8 +26,8 @@ grouped_data = data.groupby(['時間區間', '生理性別']).size().unstack().f
 st.plotly_chart(grouped_data.plot(kind='line').figure)
 
 # 設定圖表標籤等
-plt.xlabel('time of range')
-plt.ylabel('number of people')
+pl.xlabel('time of range')
+pl.ylabel('number of people')
 
 # 使用 Streamlit 的.pyplot方法顯示圖表
-st.pyplot(plt)
+st.pyplot(pl)
