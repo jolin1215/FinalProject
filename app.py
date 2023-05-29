@@ -1,13 +1,9 @@
-# numerical and statistical utilities
-import numpy as np
-
-# visualization requirements
+import streamlit as st
+import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.graph_objs as go
-import plotly.express as ex
 
 # 讀取Excel檔案
-data = pd.read_excel('活頁簿2.xlsx')
+data = pd.read_excel('https://raw.githubusercontent.com/jolin1215/FinalProject/main/活頁簿2.xlsx')
 
 # 定義函式，根據讀書時間分配到對應的區間
 def assign_time_range(hours):
