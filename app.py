@@ -1,6 +1,10 @@
-import streamlit as st
-import pandas as pd
+# numerical and statistical utilities
+import numpy as np
+
+# visualization requirements
 import matplotlib.pyplot as plt
+import plotly.graph_objs as go
+import plotly.express as ex
 
 # 讀取Excel檔案
 data = pd.read_excel('活頁簿2.xlsx')
