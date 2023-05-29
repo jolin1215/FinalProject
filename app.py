@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -21,12 +22,12 @@ data['時間區間'] = data['平均一個星期讀書時間'].apply(assign_time_
 # 以時間區間和性別分組，計算每個時間區間的人數
 grouped_data = data.groupby(['時間區間', '生理性別']).size().unstack().fillna(0)
 
-# 繪製雙曲線圖
-grouped_data.plot(kind='line')
+# 使用 Streamlit 的plotly_chart方法繪製雙曲線圖
+st.plotly_chart(grouped_data.plot(kind='line').figure)
 
 # 設定圖表標籤等
 plt.xlabel('time of range')
 plt.ylabel('number of people')
 
-# 顯示圖表
-plt.show()
+# 使用 Streamlit 的.pyplot方法顯示圖表
+st.pyplot(plt)
